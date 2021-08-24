@@ -66,19 +66,19 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🗣️𝙂𝙍𝙊𝙐𝙋', url='https://t.me/cv_group1'),
-        InlineKeyboardButton('📺𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url ='https://t.me/cv_updatez')
+        InlineKeyboardButton('🗣️𝙂𝙍𝙊𝙐𝙋', url='https://t.me/Cinema_Beacon_Group'),
+        InlineKeyboardButton('📺𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url ='https://t.me/CB_PSARIPS2')
     ],[
         InlineKeyboardButton('👨‍🔧𝘾𝙍𝙀𝘼𝙏𝙊𝙍', url='https://t.me/Cv_groupAdmin2')
     ],[
-        InlineKeyboardButton('⚠️ Help', callback_data="help")
+        InlineKeyboardButton('📦𝙅𝙊𝙄𝙉', url="https://t.me/cb_psarips1")
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await bot.send_photo(
         chat_id=update.chat.id,
-        photo="https://telegra.ph//file/53b667116e3ee6b0249e5.jpg",
+        photo="https://telegra.ph/file/c59b4fe876ddce348a7ae.jpg",
         caption=Translation.START_TEXT.format(
                 update.from_user.first_name),
         reply_markup=reply_markup,
