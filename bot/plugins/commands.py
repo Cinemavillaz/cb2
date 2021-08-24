@@ -76,8 +76,9 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
+        await bot.send_photo(
         chat_id=update.chat.id,
-        caption="https://telegra.ph/file/c59b4fe876ddce348a7ae.jpg",
+        photo="https://telegra.ph//file/53b667116e3ee6b0249e5.jpg",
         caption=Translation.START_TEXT.format(
                 update.from_user.first_name),
         reply_markup=reply_markup,
@@ -97,7 +98,7 @@ async def help(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
        
-        photo="https://telegra.ph/file/c59b4fe876ddce348a7ae.jpg",
+        await bot.send_photo(
         chat_id=update.chat.id,
         text=Translation.HELP_TEXT,
         reply_markup=reply_markup,
@@ -115,7 +116,7 @@ async def about(bot, update):
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
-        photo="https://telegra.ph/file/c59b4fe876ddce348a7ae.jpg",
+        await bot.send_photo(
         chat_id=update.chat.id,
         text=Translation.ABOUT_TEXT,
         reply_markup=reply_markup,
