@@ -54,7 +54,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍𝙎', url="https://t.me/joinchat/j7bQHCK9B2hmYzc9"
+                                    'ɴᴇᴡ ᴍᴏᴠɪᴇꜱ', url="https://t.me/joinchat/nO3dDangBz81N2Q1"
                                 )
                         ]
                     ]
@@ -66,19 +66,20 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🗣️ɢʀᴏᴜᴘ', url='https://t.me/cv_group1'),
-        InlineKeyboardButton('📺ᴄʜᴀɴɴᴇʟ', url ='https://t.me/new_movie_z')
+        InlineKeyboardButton('🗣️ɢʀᴏᴜᴘ', url='https://t.me/Cinema_Beacon_Group'),
+        InlineKeyboardButton('📺ᴄʜᴀɴɴᴇʟ', url ='https://t.me/CB_PSARIPS2')
     ],[
         InlineKeyboardButton('📌ᴄʀᴇᴀᴛᴏʀ', url='https://t.me/Cv_groupAdmin2')
     ],[
-        InlineKeyboardButton('💡 Help', callback_data="help")
+        InlineKeyboardButton('📦 ᴊᴏɪɴ', url="https://t.me/cb_psarips1")
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await bot.send_photo(
         chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(
+        captionhttps://telegra.ph/file/c59b4fe876ddce348a7ae.jpg",
+        caption=Translation.START_TEXT.format(
                 update.from_user.first_name),
         reply_markup=reply_markup,
         parse_mode="html",
