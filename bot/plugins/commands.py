@@ -22,9 +22,9 @@ async def start(bot, update):
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
-                text="🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝙐𝙥𝙙𝙖𝙩𝙚 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭  നിങ്ങൾക് സിനിമകൾ വെന്നോ? അതിനായി അത്യം ങ്ങളുടെ മെയിൻ ചാനലിൽ ജോയിൻ ചെയ്യണം... 😁  Join ചെയതത്തിനു ശേഷം വീണ്ടും ബോട്ട് /start ആക്കൂ.😁 </b>",
+                text="❣ READ THIS INSTRUCTION ❣ \n\n🗣️ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍 \n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately...😍 \n\nJoin Our Main Channel 🙏</b>",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text=" 🔰JOIN OUR UPDATE CHANNEL🔰 ", url=f"https://t.me/cv_updatez")]
+                    [ InlineKeyboardButton(text=" 🔰 𝙹𝙾𝙸𝙽 𝙼𝙰𝙸𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 🔰 ", url=f"https://t.me/cv_updatez")]
               ])
             )
             return
@@ -54,7 +54,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'ɴᴇᴡ ᴍᴏᴠɪᴇꜱ', url="https://t.me/joinchat/nO3dDangBz81N2Q1"
+                                    '🔶New Movies🔶', url="https://t.me/new_movie_z"
                                 )
                         ]
                     ]
@@ -66,12 +66,12 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🗣️ɢʀᴏᴜᴘ', url='https://t.me/Cinema_Beacon_Group'),
-        InlineKeyboardButton('📺ᴄʜᴀɴɴᴇʟ', url ='https://t.me/CB_PSARIPS2')
+        InlineKeyboardButton('🗣️𝙂𝙍𝙊𝙐𝙋', url='https://t.me/cv_group1'),
+        InlineKeyboardButton('📺𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url ='https://t.me/cv_updatez')
     ],[
-        InlineKeyboardButton('📌ᴄʀᴇᴀᴛᴏʀ', url='https://t.me/Cv_groupAdmin2')
+        InlineKeyboardButton('👨‍🔧𝘾𝙍𝙀𝘼𝙏𝙊𝙍', url='https://t.me/Cv_groupAdmin2')
     ],[
-        InlineKeyboardButton('📦 ᴊᴏɪɴ', url="https://t.me/cb_psarips1")
+        InlineKeyboardButton('⚠️ Help', callback_data="help")
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -90,15 +90,15 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('Home 🏃‍♂️', callback_data='start'),
-        InlineKeyboardButton('About 🗞️', callback_data='about')
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('About 🚩', callback_data='about')
     ],[
-        InlineKeyboardButton('Close ❌️', callback_data='close')
+        InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
-       
-  await bot.send_message(
+    
+    await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.HELP_TEXT,
         reply_markup=reply_markup,
@@ -116,7 +116,7 @@ async def about(bot, update):
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
-  await bot.send_message(
+    await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.ABOUT_TEXT,
         reply_markup=reply_markup,
