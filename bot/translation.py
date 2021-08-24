@@ -20,7 +20,7 @@ Dont Hit /help Button Below..
     
     ABOUT_TEXT = """<b>➥ Name</b> : <code> Auto Filter Bot</code>
     
-<b>➥ Creator</b> : <b><i><a href="https://t.me/Cv_groupAdmin2"></a>𝓳ꪮꫀꪶ ᵇˣ</i></b>
+<b>➥ Creator</b> : <i><a href="https://t.me/Cv_groupAdmin2"></a>𝓳ꪮꫀꪶ ᵇˣ</i>
 
 <b>➥ Language</b> : <code>Python3</code>
 
